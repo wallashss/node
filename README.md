@@ -22,6 +22,12 @@ Start application:
 npm start
 ```
 
+Start application in cluster mode:
+
+```console
+CLUSTER_MODE=true npm start
+```
+
 Get server health:
 
 ```console
