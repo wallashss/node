@@ -1,5 +1,6 @@
 const express = require('express')
 
+const security = require('source/middlewares/security')
 const request = require('src/middlewares/request')
 const response = require('src/middlewares/response')
 const error = require('src/middlewares/error')
@@ -12,6 +13,7 @@ const port = process.env.PORT || 3000
 server.use(express.json())
 server.use(express.urlencoded({ extended: false }))
 
+server.use(security)
 server.use(request)
 server.use(routes)
 server.use(response)
