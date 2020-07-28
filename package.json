@@ -8,10 +8,15 @@
     "dev": "NODE_PATH=. NODE_ENV=dev nodemon src",
     "test": "npm run test:style && npm run test:unit && npm run test:integration && npm run test:security",
     "test:style": "standard",
-    "test:unit": "NODE_PATH=. mocha 'test/unit/**/*.test.js'",
+    "test:unit": "NODE_PATH=. nyc _mocha 'test/unit/**/*.test.js'",
     "test:integration": "NODE_PATH=. mocha --exit 'test/integration/**/*.test.js'",
     "test:security": "npm audit --audit-level=moderate",
-    "test:performance": "artillery run -c test/performance/config.yml test/performance/all.yml -o logs/performance.log"
+    "test:performance": "artillery run -c test/performance/config.yml test/performance/all.yml -o logs/performance.log",
+    "cover": "npm run cover:unit && npm run cover:integration && npm run cover:report",
+    "cover:unit": "nyc --silent npm run test:unit",
+    "cover:integration": "nyc --silent --no-clean npm run test:integration",
+    "cover:report": "nyc report --reporter=lcov --reporter=text",
+    "performance:report": "artillery report logs/performance.log"
   },
   "repository": {
     "type": "git",
@@ -45,11 +50,16 @@
     "faker": "^4.1.0",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
     "standard": "^14.3.4"
   },
   "standard": {
     "env": [
       "mocha"
     ]
+  },
+  "nyc": {
+    "all": true,
+    "temp-directory": "coverage/.nyc_output"
   }
 }

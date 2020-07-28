@@ -41,3 +41,11 @@ Run code style, unit, integration and security tests:
 ```console
 npm test
 ```
+
+### Code coverage
+
+Generate code coverage report:
+
+```console
+npm run cover
+```
