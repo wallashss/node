@@ -1,6 +1,6 @@
 const express = require('express')
 
-const security = require('source/middlewares/security')
+const security = require('src/middlewares/security')
 const request = require('src/middlewares/request')
 const response = require('src/middlewares/response')
 const error = require('src/middlewares/error')
