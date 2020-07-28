@@ -24,7 +24,7 @@ npm start
 
 ### Cluster Mode
 
-Start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster):
+To start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster), set `CLUSTER_MODE=true` in a `.env` file or run:
 
 ```console
 CLUSTER_MODE=true npm start
@@ -35,7 +35,7 @@ CLUSTER_MODE=true npm start
 Get server health:
 
 ```console
-curl --location --request GET 'http://localhost:3000/health'
+curl http://localhost:3000/health
 ```
 
 ## Test
