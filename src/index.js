@@ -1,5 +1,6 @@
 const express = require('express')
 
+const logger = require('src/logger')
 const security = require('src/middlewares/security')
 const request = require('src/middlewares/request')
 const response = require('src/middlewares/response')
@@ -19,6 +20,6 @@ server.use(routes)
 server.use(response)
 server.use(error)
 
-server.listen(port)
+server.listen(port, logger.info('Server started', { pid: process.pid }))
 
 module.exports = server
