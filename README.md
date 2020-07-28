@@ -32,8 +32,16 @@ curl --location --request GET 'http://localhost:3000/health'
 
 ### Style
 
-Test code style:
+Run code style test:
 
 ```console
 npm run test:style
+```
+
+### Unit
+
+Run unit tests:
+
+```console
+npm run test:unit
 ```

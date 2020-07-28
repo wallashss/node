@@ -6,8 +6,9 @@
   "scripts": {
     "start": "NODE_PATH=. node src",
     "dev": "NODE_PATH=. NODE_ENV=dev nodemon src",
-    "test": "npm run test:style",
-    "test:style": "standard"
+    "test": "npm run test:style && npm run test:unit",
+    "test:style": "standard",
+    "test:unit": "NODE_PATH=. mocha 'test/unit/**/*.test.js'"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,15 @@
     "winston-daily-rotate-file": "^4.5.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "faker": "^4.1.0",
+    "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
     "standard": "^14.3.4"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
   }
 }
