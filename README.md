@@ -16,17 +16,21 @@ npm install
 
 ## Run
 
-Start application:
+Start the application:
 
 ```console
 npm start
 ```
 
-Start application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster) (optional):
+### Cluster Mode
+
+Start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster):
 
 ```console
 CLUSTER_MODE=true npm start
 ```
+
+### API
 
 Get server health:
 
@@ -36,21 +40,21 @@ curl --location --request GET 'http://localhost:3000/health'
 
 ## Test
 
-## Code Style, Unit, Integration and Security Tests
-
 Run code style, unit, integration and security tests:
 
 ```console
 npm test
 ```
 
-Generate code coverage test report (optional):
+### Code Coverage
+
+Generate code coverage test report:
 
 ```console
 npm run cover
 ```
 
-## Performance Tests
+### Performance Tests
 
 Run performance tests:
 
@@ -58,7 +62,7 @@ Run performance tests:
 npm run test:performance
 ```
 
-When performance tests are completed, generate report (optional):
+When performance tests are completed, generate report:
 
 ```console
 npm run performance:report
