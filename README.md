@@ -6,7 +6,7 @@ Node.js application template with security enhancements, log rotation and locali
 
 - [Node.js](https://nodejs.org)
 
-Optionally, this project can be [build and run in Docker](https://github.com/filipecorrea/node/wiki/Build-and-Run-in-Docker).
+Optionally, this application and all the different tests can be [build and run in Docker](https://github.com/filipecorrea/node/wiki/Build-and-Run-in-Docker).
 
 ## Setup
 
