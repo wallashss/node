@@ -56,6 +56,8 @@ Generate code coverage test report:
 npm run cover
 ```
 
+When reports are created, `coverage/lcov-report/index.html` can be opened in a web browser.
+
 ### Performance Tests
 
 Run performance tests:
