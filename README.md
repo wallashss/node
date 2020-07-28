@@ -1,2 +1,3 @@
-# node
-Node.js application template
+# Node
+
+Node.js application template.
