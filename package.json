@@ -6,9 +6,10 @@
   "scripts": {
     "start": "NODE_PATH=. node src",
     "dev": "NODE_PATH=. NODE_ENV=dev nodemon src",
-    "test": "npm run test:style && npm run test:unit",
+    "test": "npm run test:style && npm run test:unit && npm run test:integration",
     "test:style": "standard",
-    "test:unit": "NODE_PATH=. mocha 'test/unit/**/*.test.js'"
+    "test:unit": "NODE_PATH=. mocha 'test/unit/**/*.test.js'",
+    "test:integration": "NODE_PATH=. mocha --exit 'test/integration/**/*.test.js'"
   },
   "repository": {
     "type": "git",
