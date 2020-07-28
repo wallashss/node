@@ -27,3 +27,13 @@ Get server health:
 ```console
 curl --location --request GET 'http://localhost:3000/health'
 ```
+
+## Test
+
+### Style
+
+Test code style:
+
+```console
+npm run test:style
+```
