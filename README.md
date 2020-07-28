@@ -4,38 +4,70 @@ Node.js application template with security enhancements, log rotation and locali
 
 ## Prerequisites
 
-- [Docker](https://www.docker.com)
+- [Node.js](https://nodejs.org)
 
-## Build and Run
+Optionally, this project can be [build and run in Docker](https://github.com/filipecorrea/node/wiki/Build-and-Run-in-Docker).
 
-Build and run the project in Docker containers:
+## Setup
+
+Install project dependencies:
 
 ```console
-docker-compose up -d
+npm install
 ```
 
-## Tests
+## Run
 
-Code style, unit, integration, security and performance tests will run automatically in separate Docker containers.
+Start the application:
 
-### Code coverage
+```console
+npm start
+```
 
-When `node_api_test_cover` container finishes its execution, access generated code coverage report on `coverage` directory or open `coverage/lcov-report/index.html` in a web browser.
+### Cluster Mode
 
-### Performance
+To start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster), set `CLUSTER_MODE=true` in a `.env` file or run:
 
-When `node_api_test_performance` container finishes its execution, access generated performance report on `logs/performance.log` or run:
+```console
+CLUSTER_MODE=true npm start
+```
+
+### API
+
+Get server health:
+
+```console
+curl http://localhost:3000/health
+```
+
+## Test
+
+Run code style, unit, integration and security tests:
+
+```console
+npm test
+```
+
+### Code Coverage
+
+Generate code coverage test report:
+
+```console
+npm run cover
+```
+
+### Performance Tests
+
+Run performance tests:
+
+```console
+npm run test:performance
+```
+
+When performance tests are completed, generate report:
 
 ```console
 npm run performance:report
 ```
 
 `logs/performance.log.html` should open in a web browser.
-
-## Shutdown and cleanup
-
-Remove all containers and network:
-
-```console
-docker-compose down
-```
