@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router()
 const methods = require('requireindex')(__dirname)
 
-router.route('/documents')
+router.route('/data')
   .get(methods.list)
   .post(methods.post)
 
-router.route('/documents/:id')
+router.route('/data/:id')
   .get(methods.get)
   .put(methods.put)
   .delete(methods.delete)
