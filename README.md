@@ -16,6 +16,18 @@ Install project dependencies:
 npm install
 ```
 
+### Customize
+
+Create an `.env` file to start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster), change the its running port, logs directory, duration and maximum size. The variable names and default values are:
+
+```.env
+CLUSTER_MODE=false
+PORT=3000
+LOG_DIR=logs
+LOG_DURATION=7d
+LOG_MAX_SIZE=10m
+```
+
 ## Run
 
 Start the application:
@@ -24,15 +36,7 @@ Start the application:
 npm start
 ```
 
-Access [http://localhost:3000/docs](http://localhost:3000/docs) to check the API documentation.
-
-### Cluster Mode
-
-To start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster), set `CLUSTER_MODE=true` in a `.env` file or run:
-
-```console
-CLUSTER_MODE=true npm start
-```
+Access <a href="http://localhost:3000/docs" target="_blank">localhost:3000/docs</a> to check the API documentation.
 
 ## Test
 
