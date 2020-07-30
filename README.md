@@ -18,7 +18,7 @@ npm install
 
 ### Customize
 
-Create an `.env` file to start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster), change the its running port, logs directory, duration and maximum size. The variable names and default values are:
+Create an `.env` file to start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster), change its running port, logs directory, duration and maximum size. The variable names and default values are:
 
 ```.env
 CLUSTER_MODE=false
