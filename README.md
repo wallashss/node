@@ -36,7 +36,7 @@ Start the application:
 npm start
 ```
 
-Access <a href="http://localhost:3000/docs" target="_blank">localhost:3000/docs</a> to check the API documentation.
+Access [localhost:3000/docs](http://localhost:3000/docs) to check the API documentation.
 
 ## Test
 
