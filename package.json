@@ -10,7 +10,7 @@
     "test:style": "standard",
     "test:unit": "NODE_PATH=. nyc _mocha 'test/unit/**/*.test.js'",
     "test:integration": "NODE_PATH=. mocha --exit 'test/integration/**/*.test.js'",
-    "test:security": "npm audit --audit-level=moderate",
+    "test:security": "npm audit --production --audit-level=moderate",
     "test:performance": "artillery run -c test/performance/config.yml test/performance/all.yml -o logs/performance.log",
     "cover": "npm run cover:unit && npm run cover:integration && npm run cover:report",
     "cover:unit": "nyc --silent npm run test:unit",
