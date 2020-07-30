@@ -24,20 +24,14 @@ Start the application:
 npm start
 ```
 
+Access [http://localhost:3000/docs](http://localhost:3000/docs) to check the API documentation.
+
 ### Cluster Mode
 
 To start the application in [cluster mode](https://nodejs.org/api/cluster.html#cluster_cluster), set `CLUSTER_MODE=true` in a `.env` file or run:
 
 ```console
 CLUSTER_MODE=true npm start
-```
-
-### API
-
-Get server health:
-
-```console
-curl http://localhost:3000/health
 ```
 
 ## Test

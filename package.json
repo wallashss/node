@@ -1,7 +1,7 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "description": "Node.js application",
+  "description": "Node.js application template",
   "main": "src/index.js",
   "scripts": {
     "start": "NODE_PATH=. node src",
@@ -27,7 +27,11 @@
     "node.js",
     "application"
   ],
-  "author": "Filipe Correa",
+  "author": {
+    "name" : "Filipe Correa",
+    "email" : "filipecorrea@me.com",
+    "url": "https://github.com/filipecorrea"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/filipecorrea/node/issues"
@@ -40,6 +44,8 @@
     "http-status": "^1.4.2",
     "lodash": "^4.17.19",
     "requireindex": "^1.2.0",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.0"
   },

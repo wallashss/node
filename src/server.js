@@ -15,8 +15,11 @@ server.use(express.json())
 server.use(express.urlencoded({ extended: false }))
 
 server.use(security)
+
+server.use(routes.swagger)
+
 server.use(request)
-server.use(routes)
+server.use(routes.api)
 server.use(response)
 server.use(error)
 
