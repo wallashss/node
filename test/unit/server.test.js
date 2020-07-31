@@ -13,11 +13,6 @@ describe('Server', () => {
     expect(urlencodedParser).to.be.an('object')
     expect(urlencodedParser.handle.name).to.be.equal('urlencodedParser')
   })
-  it('enables security middleware', () => {
-    const security = getMiddleware('security')
-    expect(security).to.be.an('object')
-    expect(security.handle.name).to.be.equal('security')
-  })
   it('enables router middleware', () => {
     const router = getMiddleware('router')
     expect(router).to.be.an('object')
