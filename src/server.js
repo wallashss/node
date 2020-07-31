@@ -20,8 +20,8 @@ server.use(routes.swagger)
 
 server.use(request)
 server.use(routes.api)
-server.use(response)
 server.use(error)
+server.use(response)
 
 server.listen(port, logger.info('Server started', { pid: process.pid }))
 

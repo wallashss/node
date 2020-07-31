@@ -1,9 +1,15 @@
 const httpStatus = require('http-status')
 const logger = require('src/logger')
 
-module.exports = (err, req, res, next) => {
-  const status = err.statusCode || httpStatus.INTERNAL_SERVER_ERROR
-  res.status(status).send(err)
+function error (err, req, res, next) {
+  const unknownError = !err.statusCode
 
-  logger.error(err.message, { res: { status } })
+  if (unknownError) logger.error('Unknown', err)
+
+  res.statusCode = err.statusCode || httpStatus.INTERNAL_SERVER_ERROR
+  res.locals = err
+
+  next(null, req, res)
 }
+
+module.exports = error

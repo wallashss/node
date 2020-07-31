@@ -21,7 +21,7 @@ describe('Routes: DELETE data/{:id}', function () {
       expect(this.res.locals).to.be.deep.equal(undefined)
     })
 
-    it('continue the request pipeline', function () {
+    it('continues the request pipeline', function () {
       expect(this.nextStub).to.have.been.called
     })
   })
