@@ -6,8 +6,8 @@ chai.use(require('sinon-chai'))
 const faker = require('faker')
 const requestMiddleware = require('src/middlewares/request')
 
-describe('Middlewares: Request', function () {
-  beforeEach(function () {
+describe('Middlewares: Request', () => {
+  beforeEach(() => {
     this.req = {
       path: faker.lorem.word(),
       body: {
@@ -19,8 +19,8 @@ describe('Middlewares: Request', function () {
     this.nextStub = sinon.stub()
   })
 
-  describe('when processing request', function () {
-    it('continues the request pipeline', function () {
+  describe('when processing request', () => {
+    it('continues the request pipeline', () => {
       requestMiddleware(this.req, this.res, this.nextStub)
       expect(this.nextStub).to.have.been.called
     })

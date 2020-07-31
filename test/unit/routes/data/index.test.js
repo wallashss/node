@@ -4,8 +4,8 @@ const expect = chai.expect
 const router = require('src/routes/data')
 const listEndpoints = require('express-list-endpoints')
 
-describe('Routes: Data', function () {
-  it('exports an express router', function () {
+describe('Routes: Data', () => {
+  it('exports an express router', () => {
     expect(router.stack).to.be.an('array')
   })
 

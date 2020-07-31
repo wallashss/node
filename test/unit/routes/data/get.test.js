@@ -5,23 +5,23 @@ const sinon = require('sinon')
 chai.use(require('sinon-chai'))
 const getRoute = require('src/routes/data/get')
 
-describe('Routes: GET data/{:id}', function () {
-  beforeEach(function () {
+describe('Routes: GET data/{:id}', () => {
+  beforeEach(() => {
     this.req = {}
     this.res = {}
     this.nextStub = sinon.stub()
   })
 
-  describe('when the request is successful', function () {
-    beforeEach(function () {
+  describe('when the request is successful', () => {
+    beforeEach(() => {
       return getRoute(this.req, this.res, this.nextStub)
     })
 
-    it('sets res.locals to expected response', function () {
+    it('sets res.locals to expected response', () => {
       expect(this.res.locals).to.be.deep.equal(undefined)
     })
 
-    it('continue the request pipeline', function () {
+    it('continues the request pipeline', () => {
       expect(this.nextStub).to.have.been.called
     })
   })
