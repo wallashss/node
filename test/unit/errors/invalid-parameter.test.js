@@ -7,7 +7,7 @@ const localization = require('src/localization')
 const randomParameter = faker.lorem.word()
 const randomType = faker.lorem.word()
 
-describe('Invalid parameter error', () => {
+describe('Errors: Invalid Parameter', () => {
   beforeEach(function () {
     this.error = new InvalidParameterError(randomParameter, randomType)
   })

@@ -6,7 +6,7 @@ const localization = require('src/localization')
 
 const randomParameter = faker.lorem.word()
 
-describe('Missing parameter error', () => {
+describe('Errors: Missing Parameter', () => {
   beforeEach(function () {
     this.error = new MissingParameterError(randomParameter)
   })

@@ -4,7 +4,7 @@ const httpStatus = require('http-status')
 const InternalServerError = require('src/errors/internal-server')
 const localization = require('src/localization')
 
-describe('Errors: InternalServerError Suite', function () {
+describe('Errors: Internal Server', function () {
   beforeEach(function () {
     this.error = new InternalServerError()
   })

@@ -4,7 +4,7 @@ const httpStatus = require('http-status')
 const NotFoundError = require('src/errors/not-found')
 const localization = require('src/localization')
 
-describe('Errors: NotFoundError Suite', function () {
+describe('Errors: Not Found', function () {
   beforeEach(function () {
     this.error = new NotFoundError()
   })
