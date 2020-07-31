@@ -3,11 +3,12 @@ const chai = require('chai')
 const expect = chai.expect
 const sinon = require('sinon')
 chai.use(require('sinon-chai'))
+const faker = require('faker')
 const getRoute = require('src/routes/data/get')
 
 describe('Routes: GET data/{:id}', () => {
   beforeEach(() => {
-    this.req = {}
+    this.req = { params: { id: faker.random.number() } }
     this.res = {}
     this.nextStub = sinon.stub()
   })
@@ -18,7 +19,7 @@ describe('Routes: GET data/{:id}', () => {
     })
 
     it('sets res.locals to expected response', () => {
-      expect(this.res.locals).to.be.deep.equal(undefined)
+      expect(this.res.locals).to.be.deep.equal({ id: this.req.params.id })
     })
 
     it('continues the request pipeline', () => {

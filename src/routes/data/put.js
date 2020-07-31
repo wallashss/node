@@ -27,7 +27,9 @@
  *                $ref: '#/components/schemas/Data'
  */
 
+const data = require('src/controllers/data')
+
 module.exports = (req, res, next) => {
-  res.locals = req.body
+  res.locals = data.update(req.body)
   next(null, req, res)
 }

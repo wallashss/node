@@ -5,10 +5,10 @@ const expect = chai.expect
 
 const server = require('src/server')
 
-describe('Get document', () => {
-  it('returns a document', done => {
+describe('Routes: GET data/{:id}', () => {
+  it('returns data', done => {
     chai.request(server)
-      .get('/documents/1')
+      .get('/data/1')
       .end((err, res) => {
         expect(err).to.be.equal(null)
         expect(res).to.have.status(200)

@@ -16,10 +16,9 @@
  *                  $ref: '#/components/schemas/Data'
  */
 
-// const MissingParameterError = require('src/errors/missing-parameter')
+const data = require('src/controllers/data')
+
 module.exports = (req, res, next) => {
-  res.locals = []
-  // next(new MissingParameterError('someparam'), req, res)
-  // next(new Error(), req, res)
+  res.locals = data.retrieve()
   next(null, req, res)
 }

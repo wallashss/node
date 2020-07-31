@@ -3,11 +3,12 @@ const chai = require('chai')
 const expect = chai.expect
 const sinon = require('sinon')
 chai.use(require('sinon-chai'))
+const faker = require('faker')
 const deleteRoute = require('src/routes/data/delete')
 
 describe('Routes: DELETE data/{:id}', () => {
   beforeEach(() => {
-    this.req = {}
+    this.req = { params: { id: faker.random.number() } }
     this.res = {}
     this.nextStub = sinon.stub()
   })

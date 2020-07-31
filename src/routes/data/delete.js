@@ -14,6 +14,9 @@
  *                $ref: '#/components/schemas/Data'
  */
 
+const data = require('src/controllers/data')
+
 module.exports = (req, res, next) => {
+  data.delete(req.params.id)
   next(null, req, res)
 }
