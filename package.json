@@ -28,8 +28,8 @@
     "application"
   ],
   "author": {
-    "name" : "Filipe Correa",
-    "email" : "filipecorrea@me.com",
+    "name": "Filipe Correa",
+    "email": "filipecorrea@me.com",
     "url": "https://github.com/filipecorrea"
   },
   "license": "ISC",
@@ -53,10 +53,13 @@
     "artillery": "^1.6.1",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "express-list-endpoints": "^5.0.0",
     "faker": "^4.1.0",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
     "nyc": "^15.1.0",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
     "standard": "^14.3.4"
   },
   "standard": {
