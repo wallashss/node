@@ -27,7 +27,7 @@
  *                $ref: '#/components/schemas/Data'
  */
 
-const data = require('src/controllers/data')
+const data = require('src/services/data')
 
 module.exports = (req, res, next) => {
   res.locals = data.update(req.body)
