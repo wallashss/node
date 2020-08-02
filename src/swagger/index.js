@@ -1,4 +1,5 @@
 const swaggerJsdoc = require('swagger-jsdoc')
+
 const paths = require('src/swagger/paths')
 
 const options = {

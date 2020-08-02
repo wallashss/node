@@ -1,12 +1,12 @@
 const cluster = require('cluster')
-const numCPUs = require('os').cpus().length
+const os = require('os')
 
 const logger = require('src/components/logger')
 
 if (cluster.isMaster) {
   logger.info('Master started', { pid: process.pid })
 
-  for (let i = 0; i < numCPUs; i++) {
+  for (let i = 0; i < os.cpus().length; i++) {
     cluster.fork()
   }
 
