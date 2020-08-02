@@ -1,4 +1,3 @@
-require('dotenv').config()
+const config = require('src/config/server')
 
-if (process.env.CLUSTER_MODE === 'true') require('src/cluster')
-else require('src/server')
+!config.clusterMode ? require('src/server') : require('src/cluster')
