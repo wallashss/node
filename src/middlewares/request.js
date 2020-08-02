@@ -1,4 +1,4 @@
-const logger = require('src/logger')
+const logger = require('src/components/logger')
 
 function request (req, res, next) {
   logger.info('Request', {
