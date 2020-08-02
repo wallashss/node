@@ -1,4 +1,4 @@
-module.exports = (id) => {
-  console.log('TODO delete data')
+module.exports = (id, database) => {
+  // TODO Delete data in database
   return { id }
 }

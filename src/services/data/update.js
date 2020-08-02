@@ -1,4 +1,4 @@
-module.exports = (data) => {
-  console.log('TODO update data')
+module.exports = (data, database) => {
+  // TODO Update data from database
   return data
 }

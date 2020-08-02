@@ -1,5 +1,4 @@
-module.exports = (id = null) => {
-  console.log('TODO retrieve data')
-  if (id) return { id }
-  return []
+module.exports = (id, database) => {
+  // TODO Retrieve data from database
+  return { id }
 }

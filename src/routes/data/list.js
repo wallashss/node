@@ -19,6 +19,6 @@
 const data = require('src/services/data')
 
 module.exports = (req, res, next) => {
-  res.locals = data.retrieve()
+  res.locals = data.query()
   next(null, req, res)
 }
