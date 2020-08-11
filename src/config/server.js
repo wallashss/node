@@ -10,7 +10,7 @@ const schema = joi.object({
    */
   CLUSTER_MODE: joi.boolean()
     .truthy('TRUE').truthy('true').falsy('FALSE').falsy('false')
-    .default(true),
+    .default(false),
   PORT: joi.number()
     .port()
     .default(3000)
