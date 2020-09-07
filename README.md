@@ -15,19 +15,33 @@ npm install
 ## Setup
 
 
-### HKBase
+### MongoDB
 
-The application expect a `setup.json` file in the root, which contains setup configuration to acces an `HKBase`. It should have this structure:
+The application expect a `setup.json` file in the root, which contains setup configuration to access an `MongoDB` instance. It should have this structure:
 
 ```json
 {
-	"hkbase": <HKBASE_URL>,
-	"repository": <REPOSITORY_NAME>,
-	"options": {
-		"authToken": <TOKEN>
+  "dburl": "'mongodb://localhost:27017",
+  "dbname": "libras",
+  "options" : {}
+}
+```
+
+To work with `IBM Cloud` see the [reference](https://cloud.ibm.com/docs/databases-for-mongodb?topic=databases-for-mongodb-external-app&programming_language=javascript) and following snipet:
+
+```json
+{
+  "dburl": "mongodb://<username>:<password>@<host>:<port>,<host>:<port>/<database>?authSource=admin&replicaSet=replset",
+  "dbname": "libras",
+  "options" : { 
+		"tls": true,
+		"tlsCAFile": "/path/to/cert",
+		"useUnifiedTopology": true 
 	}
 }
 ```
+
+> You must get the credentials and certificated from the service
 
 ### Watson services
 
